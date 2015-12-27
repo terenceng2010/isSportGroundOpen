@@ -87,7 +87,7 @@ http://www.lcsd.gov.hk/lsb/jogging/907_201512.pdf
 
 灣仔運動場
 22° 16' 53.0",114° 10' 40.0"
-
+no info
 
 斧山道運動場
 22° 20' 18.0",114° 12' 26.0"
@@ -106,5 +106,6 @@ regex to find date with bookings in output.txt:
 http://www.lcsd.gov.hk/lsb/jogging/197_201512.pdf
 
 元朗大球場
+22° 26' 33.0",114° 1' 17.0"
 http://www.lcsd.gov.hk/lsb/jogging/214_201512.pdf
 

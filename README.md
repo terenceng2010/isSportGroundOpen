@@ -87,11 +87,11 @@ http://www.lcsd.gov.hk/lsb/jogging/907_201512.pdf
 
 灣仔運動場
 22° 16' 53.0",114° 10' 40.0"
-http://www.lcsd.gov.hk/lsb/jogging/723_201512.pdf
+
 
 斧山道運動場
 22° 20' 18.0",114° 12' 26.0"
-http://www.lcsd.gov.hk/lsb/jogging/197_201512.pdf
+http://www.lcsd.gov.hk/lsb/jogging/723_201512.pdf
 
 command to extract the pdf:
 
@@ -103,5 +103,8 @@ regex to find date with bookings in output.txt:
 
 天水圍運動場
 22° 27' 17.0",114° 0' 18.0"
+http://www.lcsd.gov.hk/lsb/jogging/197_201512.pdf
+
+元朗大球場
 http://www.lcsd.gov.hk/lsb/jogging/214_201512.pdf
 

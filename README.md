@@ -92,9 +92,13 @@ http://www.lcsd.gov.hk/lsb/jogging/723_201512.pdf
 斧山道運動場
 22° 20' 18.0",114° 12' 26.0"
 http://www.lcsd.gov.hk/lsb/jogging/197_201512.pdf
+
 command to extract the pdf:
+
 pdftotext -layout THE_ABOVE.pdf output.txt
+
 regex to find date with bookings in output.txt:
+
 ^[\s]?[\d]+[\s].{2,}
 
 天水圍運動場

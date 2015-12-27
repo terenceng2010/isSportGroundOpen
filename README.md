@@ -99,7 +99,7 @@ pdftotext -layout THE_ABOVE.pdf output.txt
 
 regex to find date with bookings in output.txt:
 
-^[\s]?[\d]+[\s].{2,}
+^[\s]{0,2}[\d]{1,2}[\s]*[(]?.[)]?[\s]{5,}.*
 
 天水圍運動場
 22° 27' 17.0",114° 0' 18.0"

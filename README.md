@@ -1,6 +1,12 @@
 # isSportGroundOpen
 Find out the sport ground open status
 
+# extract status:
+
+1. solvable
+2. solvable but need special handling
+3. need another approach...
+
 # by extracting the below pdf
 小西灣運動場
 22° 16' 3.0",114° 14' 56.0"

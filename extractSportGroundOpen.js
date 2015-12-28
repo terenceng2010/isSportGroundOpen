@@ -18,11 +18,15 @@ fs.readFile('./txt/'+fileyearmonth+'/'+filenumber+'_'+fileyearmonth+'.txt', 'utf
       
       if(line.indexOf("上午") !=-1 || line.indexOf(":") !=-1 || line.indexOf("最新更改日期") !=-1
           || line.indexOf("-") !=-1 || line.indexOf("AM") !=-1 || line.indexOf("PM") !=-1
-          || line.indexOf("Hour") !=-1 || line.indexOf("如有節目調動") !=-1
+          || line.indexOf("am") !=-1 || line.indexOf("pm") !=-1
+          || line.indexOf("Hour") !=-1 || line.indexOf("如有節目調動") !=-1 
+          || line.indexOf("發出日期") !=-1
+          
         ){
         
       }else{
         console.log(line.split(/\s+/).filter(Boolean).filter(unwantString));      
+        //if contain will be confined. it is valid
       }
 
       
@@ -36,8 +40,11 @@ function unwantString(element,index,array){
   var e = element;
   
   if(e == "(" || e == ")" || e == "/" 
+     || e == "Mon" || e == "Tue"  || e == "Wed"
+     || e == "Thu" || e == "Thur" || e == "Fri"  || e == "Sat"
+     || e == "Sun"   
      || e == "MON" || e == "TUE"  || e == "WED"
-     || e == "THU" || e == "FRI"  || e == "SAT"
+     || e == "THU" || e == "THUR"  || e == "FRI"  || e == "SAT"
      || e == "SUN" 
      || e == "一"  || e == "二"  || e == "三"
      || e == "四" || e == "五" || e == "六"

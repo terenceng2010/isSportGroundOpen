@@ -1,4 +1,4 @@
-#where $1 e.g 201512
+#where $1 is yearmonth e.g 201512 or 201601
 for file in ./raw/$1/*
 do
    #echo $file

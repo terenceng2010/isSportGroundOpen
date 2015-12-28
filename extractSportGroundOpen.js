@@ -25,7 +25,10 @@ fs.readFile('./txt/'+fileyearmonth+'/'+filenumber+'_'+fileyearmonth+'.txt', 'utf
         ){
         
       }else{
-        console.log(line.split(/\s+/).filter(Boolean).filter(unwantString));      
+        var toBePushed =  line.split(/\s+/).filter(Boolean).filter(unwantString);
+        
+        //console.log(toBePushed);      
+        finalArray.push(toBePushed);
         //if contain will be confined. it is valid
       }
 
@@ -33,6 +36,22 @@ fs.readFile('./txt/'+fileyearmonth+'/'+filenumber+'_'+fileyearmonth+'.txt', 'utf
       //http://stackoverflow.com/questions/19888689/remove-empty-strings-from-array-while-keeping-record-without-loop
       
   });
+
+  //remove all unrelated data before 1st of a month
+  while(parseInt(finalArray[0][0]) !=1 ){
+    finalArray.shift();
+  }
+  
+  while(parseInt(finalArray[finalArray.length-1][0] > 31)){
+    finalArray.pop(); 
+  }
+
+  //remove all unrelated data after 31st of a month.  
+  while(finalArray.length > 31){
+    finalArray.pop();     
+  }
+  
+  console.log(finalArray);   
 });
 
 function unwantString(element,index,array){

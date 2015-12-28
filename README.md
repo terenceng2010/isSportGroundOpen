@@ -16,7 +16,7 @@ pdftotext -layout THE_ABOVE.pdf output.txt
 
 regex to find date with bookings in output.txt:
 
-^[\s]{0,2}[\d]{1,2}[\s]*[(]?.[)]?[\s]{5,}.*
+^[\s]{0,}[\d]{1,2}[\s]{1,}.*$
 
 # by extracting the below pdf
 小西灣運動場,2

@@ -7,7 +7,8 @@ Find out the sport ground open status
 2. run pdfToTxtBatch.sh . e.g `./pdfToTxtBatch.sh 201602` to convert all pdf in  ./raw/201602 to ./txt/201602
    Note that you may need to pdftotext first. http://www.cyberciti.biz/faq/converter-pdf-files-to-text-format-command/
 3. cd to app and do `npm isntall`
-4. run the program by `DEBUG=app:* npm start`
+4. test and run the program by `DEBUG=app:* npm start`
+5. run the program even after logout by forever https://github.com/foreverjs/forever/issues/540
 
 # Demo
 http://anydrink.space:3000/

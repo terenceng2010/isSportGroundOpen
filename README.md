@@ -4,7 +4,7 @@ Find out the sport ground open status
 # How to deploy?
 
 1. run wgetAllRawPDF.sh . e.g `./wgetAllRawPDF.sh 201602` to download all pdf links in url_list_201602.txt to ./raw/201602
-2. run pdfToTxtBatch.sh . e.g `./runToTxtBatch.sh 201602` to convert all pdf in  ./raw/201602 to ./txt/201602
+2. run pdfToTxtBatch.sh . e.g `./pdfToTxtBatch.sh 201602` to convert all pdf in  ./raw/201602 to ./txt/201602
    Note that you may need to pdftotext first. http://www.cyberciti.biz/faq/converter-pdf-files-to-text-format-command/
 3. cd to app and do `npm isntall`
 4. run the program by `DEBUG=app:* npm start`

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Pick a sport ground:
+  ul#sportgrounds
+    each sportground in sportgroundList
+      if sportground.Usable
+        li
+          a(href="sportground/"+sportground.ID+"/"+sportground.ChineseName) #{sportground.ChineseName}

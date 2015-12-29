@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1=sportgroundName
+  p=doesItOpen
+  if doesItOpen == "maybe not"
+    a(href="http://www.lcsd.gov.hk/lsb/jogging/"+sportgroundId+"_"+yearMonth+".pdf") have a look at the pdf

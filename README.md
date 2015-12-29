@@ -9,6 +9,9 @@ Find out the sport ground open status
 3. cd to app and do `npm isntall`
 4. run the program by `DEBUG=app:* npm start`
 
+# Demo
+http://anydrink.space:3000/
+
 # extract status:
 
 1. solvable

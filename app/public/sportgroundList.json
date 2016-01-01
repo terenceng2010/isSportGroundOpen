@@ -1,0 +1,177 @@
+[
+  {
+    "ID": 488,
+    "ChineseName": "小西灣運動場",
+    "Usable": true,
+    "Long": 114.248889,
+    "Lat": 22.267500
+  },
+  {
+    "ID": null,
+    "ChineseName": "長洲運動場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": 48,
+    "ChineseName": "九龍仔運動場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": 63,
+    "ChineseName": "巴富街運動場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": 790,
+    "ChineseName": "葵涌運動場",
+    "Usable": true,
+    "Long": 114.125278,
+    "Lat": 22.358333
+  },
+  {
+    "ID": 845,
+    "ChineseName": "青衣運動場",
+    "Usable": true,
+    "Long": 114.108056,
+    "Lat": 22.356111
+  },
+  {
+    "ID": 851,
+    "ChineseName": "和宜合道運動場",
+    "Usable": true,
+    "Long": 114.136944,
+    "Lat": 22.374167
+  },
+  {
+    "ID": 962,
+    "ChineseName": "九龍灣運動場",
+    "Usable": true,
+    "Long": 114.209722,
+    "Lat": 22.326944
+  },
+  {
+    "ID": 282,
+    "ChineseName": "粉嶺遊樂場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": 309,
+    "ChineseName": "北區運動場",
+    "Usable": true,
+    "Long": 114.130556,
+    "Lat": 22.506389
+  },
+  {
+    "ID": 375,
+    "ChineseName": "西貢鄧肇堅運動場",
+    "Usable": true,
+    "Long": 114.273333,
+    "Lat": 22.383611
+  },
+  {
+    "ID": 1060,
+    "ChineseName": "將軍澳運動場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": 683,
+    "ChineseName": "深水埗運動場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": 413,
+    "ChineseName": "馬鞍山運動場",
+    "Usable": true,
+    "Long": 114.228333,
+    "Lat": 22.420833
+  },
+  {
+    "ID": 428,
+    "ChineseName": "沙田運動場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": 547,
+    "ChineseName": "香港仔運動場",
+    "Usable": true,
+    "Long": 114.197500,
+    "Lat": 22.249444
+  },
+  {
+    "ID": 97,
+    "ChineseName": "大埔運動場",
+    "Usable": true,
+    "Long": 114.162500,
+    "Lat": 22.455278
+  },
+  {
+    "ID": 618,
+    "ChineseName": "城門谷運動場",
+    "Usable": true,
+    "Long": 114.128056,
+    "Lat": 22.376944
+  },
+  {
+    "ID": 238,
+    "ChineseName": "兆麟運動場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": 263,
+    "ChineseName": "屯門鄧肇堅運動場",
+    "Usable": true,
+    "Long": 113.974167,
+    "Lat": 22.403889
+  },
+  {
+    "ID": 907,
+    "ChineseName": "銅鑼灣運動場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": null,
+    "ChineseName": "灣仔運動場",
+    "Usable": false,
+    "Long": 0,
+    "Lat": 0
+  },
+  {
+    "ID": 723,
+    "ChineseName": "斧山道運動場",
+    "Usable": true,
+    "Long": 114.207222,
+    "Lat": 22.338333
+  },
+  {
+    "ID": 197,
+    "ChineseName": "天水圍運動場",
+    "Usable": true,
+    "Long": 114.005000,
+    "Lat": 22.454722
+  },
+  {
+    "ID": 214,
+    "ChineseName": "元朗大球場",
+    "Usable": true,
+    "Long": 114.021389,
+    "Lat": 22.442500
+  }
+]

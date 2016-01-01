@@ -8,3 +8,37 @@ block content
       if sportground.Usable
         li
           a(href="sportground/"+sportground.ID+"/"+sportground.ChineseName) #{sportground.ChineseName}
+    each sportground in sportgroundList
+      if !sportground.Usable
+        li #{sportground.ChineseName}
+  script(type='text/javascript').
+    function distance(lon1, lat1, lon2, lat2) {
+      var R = 6371; // Radius of the earth in km
+      var dLat = (lat2-lat1).toRad();  // Javascript functions in radians
+      var dLon = (lon2-lon1).toRad(); 
+      var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
+              Math.sin(dLon/2) * Math.sin(dLon/2); 
+      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+      var d = R * c; // Distance in km
+      return d;
+    }
+    
+    /** Converts numeric degrees to radians */
+    if (typeof(Number.prototype.toRad) === "undefined") {
+      Number.prototype.toRad = function() {
+        return this * Math.PI / 180;
+      }
+    }  
+    if ("geolocation" in navigator) {
+      /* geolocation is available */
+      navigator.geolocation.getCurrentPosition(function(position) {
+       var lat = position.coords.latitude;
+       var long = position.coords.longitude;
+       //alert(lat + " " +long);
+       //alert(distance(long,lat,114.207222,22.338333));
+      });
+    } else {
+      /* geolocation IS NOT available */
+      //alert('not available');
+    }

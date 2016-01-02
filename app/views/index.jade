@@ -7,29 +7,12 @@ block content
     each sportground in sportgroundList
       if sportground.Usable
         li
-          a(href="sportground/"+sportground.ID+"/"+sportground.ChineseName) #{sportground.ChineseName}
+          a(href="sportground/"+sportground.ID+"/"+sportground.ChineseName,id=sportground.ID) #{sportground.ChineseName}
     each sportground in sportgroundList
       if !sportground.Usable
         li #{sportground.ChineseName}
+  div(style='display:none;position:fixed;bottom:0;width:100%;left:0;background-color:beige;text-align:center;',id='optionalSportgroundRedirectBox') no suggestion yet
   script(type='text/javascript').
-    function distance(lon1, lat1, lon2, lat2) {
-      var R = 6371; // Radius of the earth in km
-      var dLat = (lat2-lat1).toRad();  // Javascript functions in radians
-      var dLon = (lon2-lon1).toRad(); 
-      var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-              Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
-              Math.sin(dLon/2) * Math.sin(dLon/2); 
-      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-      var d = R * c; // Distance in km
-      return d;
-    }
-    
-    /** Converts numeric degrees to radians */
-    if (typeof(Number.prototype.toRad) === "undefined") {
-      Number.prototype.toRad = function() {
-        return this * Math.PI / 180;
-      }
-    }  
     if ("geolocation" in navigator) {
       /* geolocation is available */
       navigator.geolocation.getCurrentPosition(function(position) {
@@ -37,6 +20,82 @@ block content
        var long = position.coords.longitude;
        //alert(lat + " " +long);
        //alert(distance(long,lat,114.207222,22.338333));
+
+
+      var request = new XMLHttpRequest();
+      request.open('GET', './sportgroundList.json', true);
+      
+      request.onload = function() {
+        
+        if (this.status >= 200 && this.status < 400) {
+          
+
+              
+          // Success!
+          var sportgroundList = JSON.parse(this.response);
+          var sportgroundListWithDistance = [];
+          //console.log(sportgroundList);
+          sportgroundList.map(function(obj){
+            
+            function distance(lon1, lat1, lon2, lat2) {
+              var R = 6371; // Radius of the earth in km
+              var dLat = (lat2-lat1).toRad();  // Javascript functions in radians
+              var dLon = (lon2-lon1).toRad(); 
+              var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                      Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
+                      Math.sin(dLon/2) * Math.sin(dLon/2); 
+              var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+              var d = R * c; // Distance in km
+              return d;
+            }
+            
+            /** Converts numeric degrees to radians */
+            if (typeof(Number.prototype.toRad) === "undefined") {
+              Number.prototype.toRad = function() {
+                return this * Math.PI / 180;
+              }
+            }  
+                
+            var distance = distance(long,lat,obj.Long,obj.Lat);
+            obj.distance = distance;
+            if(obj.Usable){
+              sportgroundListWithDistance.push(obj);
+            }
+          })
+          
+          sportgroundListWithDistance.sort( function(a,b) {
+            if(a.distance > b.distance){
+              return 1;
+            }
+            if(a.distance < b.distance){
+              return -1;
+            }
+            
+            return 0;
+          }); 
+          //console.log(sportgroundListWithDistance);
+        
+         
+          url = "./sportground/"+sportgroundListWithDistance[0].ID+"/"+sportgroundListWithDistance[0].ChineseName;
+         
+          
+          var redirectBox = document.getElementById("optionalSportgroundRedirectBox");
+          redirectBox.style.display= '';
+          redirectBox.innerHTML = "Is <a href='"+url+"'> " + sportgroundListWithDistance[0].ChineseName +" </a> nearby? " ;
+          
+        } else {
+          // We reached our target server, but it returned an error
+      
+        }
+      };
+      
+      request.onerror = function() {
+        // There was a connection error of some sort
+      };
+      
+      request.send();
+
+       
       });
     } else {
       /* geolocation IS NOT available */

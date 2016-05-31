@@ -11,7 +11,7 @@ Find out the sport ground open status
 5. run the program even after logout by forever https://github.com/foreverjs/forever/issues/540
 
 # Demo
-http://anydrink.space:3000/
+http://anydrink.space:3000/ (not available for now)
 
 # extract status:
 
